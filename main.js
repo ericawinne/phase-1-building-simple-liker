@@ -2,6 +2,16 @@
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
+const heart = document.querySelectorAll(".like-glyph")
+heart.addEventListener("click", function() {
+  mimicServerCall()
+  .then(() => {
+heart.innerHTML = FULL_HEART
+  })
+  .catch(() => {})
+})
+//once the user clicks on the heart it ivokes `mimicServerCall`
+
 // Your JavaScript code goes here!
 
 
